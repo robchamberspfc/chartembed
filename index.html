@@ -24,41 +24,71 @@
     <script src="https://www.ons.gov.uk/js/header.js"></script>
 </head>
 <body class="">
-<header class="global-header">
-    <div class="global-header__wrapper">
-        <a class="main-logo" href="/">
-            <img src="https://www.ons.gov.uk/assets/img/ons-logo.svg" alt="Office for National Statistics">
-        </a>
+
+<nav>
+    <div class="wrapper">
+        <div class="header col-wrap">
+            <div class="col col--lg-one-third col--md-one-third">
+                <a href="https://www.ons.gov.uk/">
+                    <img class="main-logo" src="https://www.ons.gov.uk/assets/img/ons-logo.png" alt="Office for National Statistics">
+                </a>
+            </div>
+            <div class="col col--lg-two-thirds col--md-two-thirds print--hide">&nbsp;</div>
+            <nav class="secondary-nav col col--lg-two-thirds col--md-two-thirds print--hide">
+                <ul class="secondary-nav__list">
+                    <li class="secondary-nav__item">
+                        <a class="secondary-nav__link" href="https://blog.ons.digital/">ONS digital blog</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
-</header>
-
-<nav class="ons-nav">
-
 </nav>
+
+<div class="page-intro background--gallery">
+    <div class="wrapper">
+        <div class="col-wrap">
+            <div class="col">
+
+                <div class="col col--md-47 col--lg-48">
+                    <h1 class="page-intro__title ">
+                        Chart embeds instructions
+                    </h1>
+                    <p class="page-intro__content">
+                        Embed charts from our Statistical bulletins, articles and compendia in your own website.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div class="slate">
     <div class="wrapper">
-        <p class="page-header__title page-header--pad-small">Dataset</p>
-        <h1>Religion by age and sex</h1>
-        <div class="grid-wrap">
-            <div class="grid-col tablet-grid-one-quarter">
-                <div class="grid-col tablet-grid-one-third">
-                    <img src="https://www.ons.gov.uk/img/national-statistics.png" style = "width:100% max-width:50px" alt="National Statistics">
-                </div>
-                <div class="grid-col tablet-grid-two-thirds">
-                    <p class="mini"> Contact: <a href = "#">Jonathan Porton</a>
-                </div>
+
+        <!-- full column -->
+        <div class="col-wrap">
+            <div class="col col--md-one col--lg-one">
+                <p>full column</p>
             </div>
-            <div class="grid-col tablet-grid-one-quarter">
-                <p class="mini"><strong>Release date: 06 July 2011</strong>
-                    <a href = "#">Previous versions</a>
-                </p>
+        </div>
+
+        <!-- half columns -->
+        <div class="col-wrap">
+            <div class="col col--md-half col--lg-half">
+                <div id="chart1"></div>
+                <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+                <script>
+                    var pymParent = new pym.Parent('chart1', "https://www.ons.gov.uk/embed?uri=/economy/inflationandpriceindices/bulletins/consumerpriceinflation/sept2016/cc765147", {});
+                </script>
             </div>
-            <div class="grid-col tablet-grid-one-quarter">
-                <p class="mini">Next release: 2021</p>
-            </div>
-            <div class="grid-col tablet-grid-one-quarter">
-                <p class="mini">Dataset ID: DC2107EW</p>
+            <div class="col col--md-half col--lg-half">
+                <div id="chart2"></div>
+                <script type="text/javascript" src="https://pym.nprapps.org/pym.v1.min.js"></script>
+                <script>
+                    var pymParent = new pym.Parent('chart2', "https://www.ons.gov.uk/embed?uri=/economy/inflationandpriceindices/bulletins/consumerpriceinflation/sept2016/cc765147", {});
+                </script>
             </div>
         </div>
 
